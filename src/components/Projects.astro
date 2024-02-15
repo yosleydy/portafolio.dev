@@ -1,0 +1,59 @@
+---
+
+import HTMLIcon from '../components/icons/HTML.astro';
+import CSSIcon from '../components/icons/CSS.astro';
+import JavaScriptIcon from '../components/icons/JavaScript.astro';
+
+const TAGS = {
+    HTML:{
+        name:'HTML',
+        class:'bg-black text-[#e84e2b]',
+        icon: HTMLIcon,
+    },
+    CSS:{
+        name:'CSS',
+        class:'bg-[#003159] text-white',
+        icon:CSSIcon,
+    },
+    JavaScript:{
+        name:'JavaScript',
+        class:'bg-black text-[#f0db4f]',
+        icon:JavaScriptIcon,
+    },
+   
+}
+
+
+const PROJECTS = [
+    {
+        title:'Grupo A&E Softest',
+        description:'Es una empresa fundada en Caracas en junio 2018, especializada en el área de calidad de software, desarrollo, tecnologías de información.',
+        link:'https://softest.com.ve/',
+        github:'#',
+        image:'/projects/Softest.webp',
+        tags:[TAGS.HTML,TAGS.CSS,TAGS.JavaScript]
+    }
+]
+---
+
+{
+    PROJECTS.map(({title,description,tags,image})=>(
+    <article>
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex flex-row mb-2 gap-x-2">
+            {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img class="rounded shadow-2xl shadow.white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
+    </article>
+    ))
+} 

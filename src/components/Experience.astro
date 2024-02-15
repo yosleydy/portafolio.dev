@@ -1,0 +1,30 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+const EXPERIENCE = [
+    {
+        date:'ene. 2022 - dic. 2023',
+        title:'Desarrollador de front-end',
+        description:'Desarrollo Fron-End para un aplicativo administrativo, con React.js Tailwindcss, Actualización de pagina web, desarrollo de nueva opción para aplicativo administrativo (Javascript, HTML, CSS)',
+    },
+    {
+            date:'nov. 2021 - dic. 2021',
+            title:'Desarrollador de front-end',
+            description:'Desarrollo Web (React.Js, Tailwind CSS), Desarrollo Administrativo (Laravel, Vuetify, html, Mysql, css)',
+    },
+    {
+        date:'ene. 2018 - nov. 2021',
+        title:'Programador / Team Leader',
+        description:'Desarrollo y Mantenimiento de scripts (Javascript, jQuery, php, json).Planificar y asignar tareas específicas según la estrategia. Supervisar y monitorear al equipo. Elaborar reporte semanal de acuerdo a las metas cumplidas. Brindar apoyo técnico al equipo en los casos mas complejos Team leader de Venezuela y Colombia. Mentor de desarrollo(Scraping)',
+    },
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCE.map((experiencie)=>(
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experiencie}/>
+        </li>
+        ))
+    }          
+</ol>
+
