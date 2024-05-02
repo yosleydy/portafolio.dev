@@ -1,27 +1,48 @@
 ---
-import ExperienceItem from './ExperienceItem.astro';
+import ExperienceItem from "./ExperienceItem.astro";
 const EXPERIENCE = [
     {
-        date:'ene. 2022 - dic. 2023',
+        date:'feb. 2024 - Actualmente',
+        title:'Desarrollador',
+        company: "Henki",
+        description:'Mejoras de pagina web, y desarrollo de app (React Native, Expo)',
+    },
+    {
+        date:'ene. 2022 - ene. 2024',
         title:'Desarrollador de front-end',
-        description:'Desarrollo Fron-End para un aplicativo administrativo, con React.js Tailwindcss, Actualización de pagina web, desarrollo de nueva opción para aplicativo administrativo (Javascript, HTML, CSS)',
+        company: "Softest",
+        description:'Desarrollo del sitio web (JavaScript, html5, css). Desarrollo del módulo de registró de pago (JavaScript, html5, css, Bootstrap, ajax). Desarrollo de módulo de consulta de registro (React.js). Desarrollo de documento técnico. Desarrollo de sistema facturación Laravel, Livewire, Tailwind). Desarrollo desde cero de aplicación administrativa (React, Redux, Axios,Tailwind)',
     },
     {
             date:'nov. 2021 - dic. 2021',
             title:'Desarrollador de front-end',
+            company: "Independiente",
             description:'Desarrollo Web (React.Js, Tailwind CSS), Desarrollo Administrativo (Laravel, Vuetify, html, Mysql, css)',
     },
     {
         date:'ene. 2018 - nov. 2021',
         title:'Programador / Team Leader',
+        company: "Talent",
         description:'Desarrollo y Mantenimiento de scripts (Javascript, jQuery, php, json).Planificar y asignar tareas específicas según la estrategia. Supervisar y monitorear al equipo. Elaborar reporte semanal de acuerdo a las metas cumplidas. Brindar apoyo técnico al equipo en los casos mas complejos Team leader de Venezuela y Colombia. Mentor de desarrollo(Scraping)',
+    },
+    {
+        date:'mar. 2015 - dic. 2017',
+        title:'Desarrollador Web',
+        company: "Venevisión",
+        description:'Desarrollo y mantenimiento de las plataformas web Venevisión y corporación CISNERO (Laravel, Boostrap, CSS, HTML, JavaScript, MySQL). (Noticiero Venevisión, Miss Venezuela, Madre Carmen Rendiles)',
+    },
+    {
+        date:'dic. 2012 - mar. 2015',
+        title:'Programador Junior I',
+        company: "Soluziona",
+        description:'Desarrollo y mantenimiento de las plataformas web BBVA (HTML, CSS, JSP, JavaScript, JQuery). Desarrollo de documentos técnicos. Utilización de framework propio del cliente (Visual Nacar)',
     },
 ]
 ---
-<ol class="relative border-s border-gray-200 ml-3">
+<ol class="relative mt-16">
     {
         EXPERIENCE.map((experiencie)=>(
-        <li class="mb-10 ms-4">
+        <li class="">
             <ExperienceItem {...experiencie}/>
         </li>
         ))
