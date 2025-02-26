@@ -7,6 +7,7 @@ import ReactIcon from '../components/icons/React.astro';
 import JavaScriptIcon from '../components/icons/JavaScript.astro';
 import LinkButton from "./LinkButton.astro";
 import Link from "./icons/Link.astro";
+import Laravel from "../components/icons/Laravel.astro";
 import GitHub from "./icons/GitHub.astro"
 
 const TAGS = {
@@ -35,7 +36,11 @@ const TAGS = {
         class:'bg-[#003159] text-white',
         icon:ReactIcon,
     },
-   
+    Laravel:{
+        name:'Laravel',
+        class:'bg-[#003159] text-white',
+        icon:Laravel,
+    },
 }
 
 
@@ -49,10 +54,24 @@ const PROJECTS = [
     },
     {
         title:'Pomodoro',
-        description:'App que nos permite gestionar el tiempo que sugiere trabajar en intervalos de 25 minutos, sin interrupción ni distracciones, y añadir tiempos de descanso.',
+        description:'App que nos permite gestionar el tiempo que sugiere trabajar en intervalos de 25 minutos, sin interrupción ni distracciones, y añadir tiempos de descanso. (Henki)',
         link:'https://play.google.com/store/apps/details?id=com.henki.pomodoro',
         image:'/projects/Pomodoro.webp',
         tags:[TAGS.Expo,TAGS.React_Native]
+    },
+    {
+        title:'Noticiero Venevision',
+        description:'Proyecto desarrollado bajo un equipo de trabajo (Organización Cisnero- Venevisión).',
+        link:'https://noticiasvenevision.com/',
+        image:'/projects/noticiero_Venevision.webp',
+        tags:[TAGS.HTML,TAGS.CSS,TAGS.JavaScript,TAGS.Laravel]
+    },
+    {
+        title:'Madre Carmen Rendiles',
+        description:'Proyecto desarrollado bajo un equipo de trabajo (Organización Cisnero- Venevisión).',
+        link:'https://madrecarmendevenezuela.com/',
+        image:'/projects/madre_carmen_rendiles.webp',
+        tags:[TAGS.HTML,TAGS.CSS,TAGS.JavaScript,TAGS.Laravel]
     }
 ]
 ---
@@ -63,7 +82,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} width="473px" height="266px" />
     </div>
   </div>
 
